@@ -22,7 +22,7 @@ Este proyecto es un conversor de monedas que utiliza la API de FreeCurrencyAPI p
 ## 2. Requisitos
 
 - Python 3.7 o superior.
-- Dependencias instaladas a través del archivo [requirements.txt](requirements.txt):
+- Dependencias necesarias:
   - `freecurrencyapi`
   - `flake8` (opcional, para verificar estilo)
 - Biblioteca `unittest` (incluida en Python) para pruebas automatizadas.
@@ -35,31 +35,32 @@ Este proyecto es un conversor de monedas que utiliza la API de FreeCurrencyAPI p
    cd Convertidor_de_Divisas_Python
    ```
 
-2. Instala las dependencias:
+2. Instala las dependencias (usando uv):
    ```bash
-   pip install -r requirements.txt
+   uv add freecurrencyapi
+   uv add flake8
    ```
 
 ## 4. Ejecución
 
 Para ejecutar el proyecto, simplemente ejecuta:
    ```bash
-   python main.py
+   uv run src/main.py
    ```
 
 Se mostrará un menú en consola con las siguientes opciones:
 
-1. Listar monedas
-2. Ver tasas de cambio
+1. Listado de monedas
+2. Tasas de cambio
 3. Convertir moneda
 4. Mostrar historial de conversiones
 5. Salir
 
 ## 5. Pruebas
 
-Se incluye un archivo de pruebas unitarias (por ejemplo: `test_currency_converter.py`) para comprobar la lógica de conversión de divisas.
+Se incluye un archivo de pruebas unitarias para comprobar la lógica de conversión de divisas.
 
 Para ejecutarlas:
    ```bash
-   python -m unittest test_currency_converter.py
+   python -m unittest test.test_currency_converter
    ```
