@@ -72,7 +72,7 @@ def convert_currency_ui(rates: dict, history: ConversionHistory):
         else:
             while True:
                 try:
-                    print(f"{color["content"]}\nIngrese la cantidad "
+                    print(f"{color['content']}\nIngrese la cantidad "
                           f"a convertir")
                     amount = float(input(
                         f"(los decimales se definen con punto. "
